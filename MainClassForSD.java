@@ -29,7 +29,7 @@ public class MainClassForSD {
     
    }
 
-    l1.display(n);
+    l1.display(n,totalstock,totalvalue);
 
    	
    }
