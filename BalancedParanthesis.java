@@ -14,7 +14,7 @@ public class BalancedParanthesis {
 			System.out.println(check(cArr));
 			
 			}
-		
+		// this is gautham logic . my logic is not working properley
 		static boolean check(char[] cArr){
 			MyStack st=new MyStack(cArr.length);
 			for(int i=0;i<cArr.length;i++){
