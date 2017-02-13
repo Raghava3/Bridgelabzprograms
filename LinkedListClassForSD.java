@@ -29,7 +29,7 @@ public class LinkedListClassForSD {
 		}
 		}
 	
-	public void display(int n)
+	public void display(int n ,int t, int v)
 		{
 			
 			NodeClassForStockData temp=head;
@@ -39,7 +39,9 @@ public class LinkedListClassForSD {
 				temp=temp.next;
 				
 			}
-		//	System.out.println(temp.StockData);
+			System.out.println("total   number of  stock value is "+t);
+		System.out.println("totoal share value is "+v);
+		
 			
 		}
 	}
