@@ -15,7 +15,7 @@ public class StockData {
 	
 	public String toString()
 	{
-		return "stock data=[stockname"+stockname+"noofshares"+noofshares+"shareprice"+shareprice+"]";
+		return "stock data=[stockname is \""+stockname+"\"  noofshares = "+noofshares+" shareprice = "+shareprice+"]";
 	}
 	
 	
