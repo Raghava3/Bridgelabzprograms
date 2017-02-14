@@ -109,7 +109,7 @@ private static int[] bubbleSortForInteger(int[] str)
 
 		
 		
-		   public static void insertionSort(String[] array) 
+		   public static void insertionSortForString(String[] array) 
 			{
 			        int len = array.length;
 
@@ -146,6 +146,68 @@ private static int[] bubbleSortForInteger(int[] str)
 			    }
 			    
 			    
+			  //---------------------------------------------------------------------------------------------
+			  //insertion  sort method for integer 
+
+			  		
+			  		
+			  		 /*  public static void insertionSortForInteger(int [] array) 
+			  			{
+			  			        int len = array.length;
+
+			  			        for (int i = len - 1; i > 1; i--) {
+			  			            if (array[i]<(array[i-1]))
+			  			            {
+			  			                swap(array, i, i - 1);
+			  			            }
+			  			        }
+
+			  			        for (int i = 2; i < len; i++) {
+			  			            int temp = array[i];
+			  			            int j = i;
+			  			            while (temp>(array[j - 1]))
+			  			            {
+			  			                array[j] = array[j - 1];
+			  			                j--;
+			  			            }
+			  			            array[j] = temp;
+			  			        }
+
+			  			        for (int i = 0; i < array.length; i++) {
+			  			        	
+			  			        	System.out.println(array[i]);
+			  						
+			  					}
+			  			    }
+
+			  			    public static  void swap(int[] array, int i, int j) 
+			  			    {
+			  			        int temp = array[i];
+			  			        array[i] = array[j];
+			  			        array[j] = temp;
+			  			    }
+			    */
+			    
+			    
+			    private static void insertionSortForInteger(int[] arr) {
+					for (int i = 1; i < arr.length; i++) {
+						int valueToSort = arr[i];
+						int j = i;
+						while (j > 0 && arr[j - 1] > valueToSort) {
+							arr[j] = arr[j - 1];
+							j--;
+						}
+						arr[j] = valueToSort;
+					}
+					
+					for (int i = 0; i < arr.length; i++)
+					{
+						System.out.println(arr[i]);
+					}
+				}
+			    
+	  //---------------------------------------------------------------------------------------------
+	// Main method
 
 public static void main(String[] args)
 {
@@ -159,12 +221,15 @@ public static void main(String[] args)
 	  a[i]=sc.nextInt();	
 	}
 	
-	int b[]=UtilityClass.bubbleSortForInteger(a);
+UtilityClass.insertionSortForInteger(a);
 	
-	for (int i = 0; i < b.length; i++) 
+	/*for (int i = 0; i < b.length; i++) 
 	{
 		System.out.println(b[i]);
-	}
+	}*/
+	
+	
+	
 	 System.out.println("enter the string which need to be sorted");
 		for (int i = 0; i < a.length; i++) 
 		{
@@ -172,13 +237,13 @@ public static void main(String[] args)
 		  c[i]=sc.next();	
 		}
 		
-		String d[]=UtilityClass.bubbleSortForString(c);
+		UtilityClass.insertionSortForString(c);
 		
-		for (int i = 0; i < b.length; i++) 
+		/*for (int i = 0; i < b.length; i++) 
 		{
 			System.out.println(d[i]);
-		}
-		
+		}*/
+		sc.close();
 }	
 		
 
