@@ -24,7 +24,8 @@ public class LinkedListForFile {
 		{
 			temp=temp.next;	 
 	    }
-		temp.next=n;
+		temp.next=null;
+		
 		return true;
 		
 		}
@@ -51,7 +52,8 @@ public class LinkedListForFile {
 	        
 	        tmp = tmp.next;
 	      
-	    }
+	        }
+	     //   return false;
 	        }
    return false;
 	
