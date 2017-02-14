@@ -58,4 +58,35 @@ public class LinkedListForFile {
    return false;
 	
 }
+	
+// method to get the index
+	
+	public int index(String s)
+	{int n=0;
+		  Node  tmp = head;
+		    while(tmp!=null)
+		    {
+		    	n++;
+		        if(head==null)
+		        {
+		            return -1;
+		        }
+		        else
+		        {
+		        String b=""+tmp.s;
+		      
+		        if(b.equals(s))
+		        {
+		         return n;
+		        }
+		        
+		        tmp = tmp.next;
+		      
+		        }
+		     //   return false;
+		        }
+	   return -1;
+		
+	}
+	
 }
