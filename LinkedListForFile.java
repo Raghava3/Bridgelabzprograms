@@ -4,6 +4,7 @@ public class LinkedListForFile {
 	
 	Node head;
 	Node last;
+	// own implementation for insert
 	public    boolean  insert (String s )
 	{
 		Node n=new Node(s);
@@ -28,14 +29,13 @@ public class LinkedListForFile {
 		
 		}
 		}
-	
-	
+	//own implementation to search
 	public boolean search(String s)
 	{
 	    Node  tmp = head;
 	    while(tmp!=null)
 	    {
-	    	 System.out.println(tmp);
+	    	
 	        if(head==null)
 	        {
 	            return false;
@@ -53,6 +53,7 @@ public class LinkedListForFile {
 	      
 	    }
 	        }
-      return false;
+   return false;
+	
 }
 }
