@@ -44,17 +44,17 @@ public class LinkedListForFile {
 	        else
 	        {
 	        String b=""+tmp.s;
-	      
+	          System.out.println(b);
 	        if(b.equals(s))
 	        {
 	         return true;
 	        }
-	        
+	        }
 	        tmp = tmp.next;
 	      
 	        }
-	     //   return false;
-	        }
+	     //  return false;
+	        
    return false;
 	
 }
