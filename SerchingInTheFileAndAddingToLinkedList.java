@@ -38,22 +38,22 @@ public class SerchingInTheFileAndAddingToLinkedList
 			System.out.println(str[i]);//printing after the split function 
 			
 		}
-		LinkedListForFile l=new LinkedListForFile();
+		LinkedListForFile l=new LinkedListForFile();//creating the object of linked list
 		for (int i = 0; i < str.length; i++)
 		{
-		System.out.println(	l.insert(str[i]));
+		System.out.println(	l.insert(str[i]));//adding to linked list
 		}
 		
-		System.out.println("enter the string to search /home/bridgelabz3/Desktop/Raghava/raghava/fileiodemo");
+		System.out.println("enter the string to search");//taking input from user to check the string is present or not
 		String st=scn.next();
-		if(l.search(st))
+		if(l.search(st))//if its there then remove
 		{
 			System.out.println("found "+st+"hence removing");
 			int loc=l.index(st);
 			int i=0;
 			System.out.println("loca"+loc);
 			System.out.println("len"+str.length);
-
+           // condition to swap
 			if(loc<str.length-1)
 			{
 			while(loc<(str.length))
@@ -68,17 +68,35 @@ public class SerchingInTheFileAndAddingToLinkedList
 				str[loc-1]="";
 			
 			 }
+			//just to print the o/p on console 
 			for (int j = 0; j < str.length-1; j++) 
 			{
 				stri=stri+str[j];
 			}
-         	System.out.println(stri);
+         //	Writing into the file
 			 String Filename="/home/bridgelabz3/Desktop/Raghava/raghava/fileiodemo.txt";
 			 ExtraClass1 e1=new ExtraClass1();
 			 e1.writingInToTheFile(Filename, stri);
 		
 
 				}
+		
+		else
+		{
+			//code to add to file
+			System.out.println("not found hence adding in to the file ");
+			for (int j = 0; j < str.length-1; j++) 
+			{
+				stri=stri+str[j];
+			}
+			stri=stri+st;
+			
+			String Filename="/home/bridgelabz3/Desktop/Raghava/raghava/fileiodemo.txt";
+			 ExtraClass1 e1=new ExtraClass1();
+			 e1.writingInToTheFile(Filename, stri);
+		
+			
+		}
 	}
 
 }
