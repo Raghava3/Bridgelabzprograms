@@ -71,7 +71,7 @@ public class SerchingInTheFileAndAddingToLinkedList
 			//just to print the o/p on console 
 			for (int j = 0; j < str.length-1; j++) 
 			{
-				stri=stri+str[j];
+				stri=stri+" "+str[j];
 			}
          //	Writing into the file
 			 String Filename="/home/bridgelabz3/Desktop/Raghava/raghava/fileiodemo.txt";
