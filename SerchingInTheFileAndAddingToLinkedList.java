@@ -87,7 +87,7 @@ public class SerchingInTheFileAndAddingToLinkedList
 			System.out.println("not found hence adding in to the file ");
 			for (int j = 0; j < str.length-1; j++) 
 			{
-				stri=stri+str[j];
+				stri=stri+" "+str[j]+" ";
 			}
 			stri=stri+st;
 			
