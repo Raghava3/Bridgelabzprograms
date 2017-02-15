@@ -2,9 +2,12 @@ package com.Bridgelabz;
 
 import java.io.BufferedReader;
 
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class SerchingInTheFileAndAddingToLinkedList 
@@ -12,7 +15,7 @@ public class SerchingInTheFileAndAddingToLinkedList
 	
 	public static void main(String[] args) throws IOException {
 		Scanner scn =new Scanner(System.in);
-		String s="",ts="";
+		String s="",ts="",stri="";
 		FileReader f=new FileReader("/home/bridgelabz3/Desktop/Raghava/raghava/fileiodemo");//this is the path of the file
 		BufferedReader b= new BufferedReader(f/* we cant pass the above address directley we havae to pass the string so we are passing it by storing in the f*/);
 	//	System.out.println("b===="+b);//this will give the fully qualified class name of buffered reader ex-java.io.BufferedReader@55f96302
@@ -41,10 +44,41 @@ public class SerchingInTheFileAndAddingToLinkedList
 		System.out.println(	l.insert(str[i]));
 		}
 		
-		System.out.println("enter the string to search ");
+		System.out.println("enter the string to search /home/bridgelabz3/Desktop/Raghava/raghava/fileiodemo");
 		String st=scn.next();
-	System.out.println(	l.search(st));
+		if(l.search(st))
+		{
+			System.out.println("found "+st+"hence removing");
+			int loc=l.index(st);
+			int i=0;
+			System.out.println("loca"+loc);
+			System.out.println("len"+str.length);
+
+			if(loc<str.length-1)
+			{
+			while(loc<(str.length))
+			{
+				str[loc-1]=str[loc];
+				loc++;
+			}
+			}
+			else
+			 {
+				 System.out.println(loc);
+				str[loc-1]="";
+			
+			 }
+			for (int j = 0; j < str.length-1; j++) 
+			{
+				stri=stri+str[j];
+			}
+         	System.out.println(stri);
+			 String Filename="/home/bridgelabz3/Desktop/Raghava/raghava/fileiodemo.txt";
+			 ExtraClass1 e1=new ExtraClass1();
+			 e1.writingInToTheFile(Filename, stri);
 		
+
+				}
 	}
 
 }
