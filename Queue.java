@@ -19,7 +19,7 @@ public class Queue {
 	
 	public int  exit()
 	{
-	 count--	;
+	 --count	;
 	return count;
 	}
 	
