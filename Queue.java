@@ -10,15 +10,17 @@ public class Queue {
 	static int count=0;
 	
 	
-	public void add()
+	public int  add()
 	{
-		count++;
-		System.out.println("Current queue size="+count+"\n");
+		int n=++count;
+		return n;
+	//	System.out.println("Current queue size="+count+"\n");
 	}
 	
-	public void exit()
+	public int  exit()
 	{
-		count--;
+	 count--	;
+	return count;
 	}
 	
 	public int size()
