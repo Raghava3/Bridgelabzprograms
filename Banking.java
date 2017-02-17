@@ -14,7 +14,7 @@ public class Banking
 		int tic=1,flag,flag1=0,option;
 		while(true)
 		{
-			BankingCashCounter b=new BankingCashCounter();
+			BankingMethodImplementationClassForMyBank b=new BankingMethodImplementationClassForMyBank();
 			Scanner sc=new Scanner(System.in);
 			System.out.println(" enter 1  to join queue  ");
 
