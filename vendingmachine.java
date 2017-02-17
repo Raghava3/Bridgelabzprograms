@@ -3,7 +3,7 @@ package com.Bridgelabz;
 public class vendingmachine {
 public static void main(String[] args)
 {
-	int n=16990,k=0,j,t=n,d=n,r=n;
+	int n=1,k=0,j,t=n,d=n,r=n,c=0;
 		j=n;//System.out.println(n.compareTo(k));
 	while(n>=1)
 	{
@@ -16,6 +16,7 @@ public static void main(String[] args)
 	{
 		System.out.println("coming"+j);
 		System.out.println((j/1000)+"  of 1000 rs notes "); 
+		c=j/1000;
 	t=j-((j/1000)*1000);
 	}
 	d=t;
@@ -24,12 +25,13 @@ public static void main(String[] args)
 	{
 		
 		d=d-500;
-		System.out.println(d);
+		System.out.println("1 no of 500 rs notes");
+		c=c+1;
 	}
 	  if(d>1) 
 	{
 		System.out.println(d/100+" of 100 rs notes");
-		
+		c=c+1;
 	}
 	  r=d;
 	  System.out.println("r"+r);
@@ -38,17 +40,62 @@ public static void main(String[] args)
 	  {
 		  System.out.println("1 of 50 rs note "); 
 		  System.out.println(r-50);
+		  c=c+1;
 	  }
 	  r=r-50;
 	  if(r==40)
-	  {
-		  System.out.println("20 of 20 notes ");
+	  {c=c+2;
+		  System.out.println("2  of 20 notes ");
 	  }
 	  
-	  System.out.println("r"+r);
-	  if(r>0&&r<20)
+	//  System.out.println("r"+r);
+	  else if (r>20)
 	  {
+		  c=c+1;
 		  System.out.println("1 of 20rs notes");
+		  
 	  }
+	  r=r-20;
+	  System.out.println(r);
+	  if(r>=10)
+	  {
+		  c=c+1;
+		  System.out.println("1 of 10rs notes");
+		  
+	  }
+	  r=r-10;
+	  System.out.println(r);
+	  if(r>5&&r!=0)
+	  {
+		  c=c+1;
+		  System.out.println("1 of 5rs notes");
+		  
+	  }
+	  r=r-5;
+	  System.out.println(r);
+	  if(r==4)
+	  {
+		  c=c+2;
+		  System.out.println("2 no of 2 rs coin");
+	  }
+	  else if(r==3)
+	  {
+		  c=c+2;
+		  System.out.println("1 no of 2 rs coin ");
+		  System.out.println("1 no of 1 rs coin ");
+
+	  }
+	  else if(r==2)
+	  {
+		  c=c+1;
+		  System.out.println("1 no of 2 rs coin ");
+	  }
+	  else
+	  {
+		  c=c+1;
+		  System.out.println("1 no of 1 rs coin");
+	  }
+	  
+	  System.out.println("totol no of denonination is "+c);
 }
 }
