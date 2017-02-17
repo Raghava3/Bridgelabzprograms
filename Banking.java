@@ -9,7 +9,7 @@ public class Banking
 	{
 		Queue q=new Queue();
 		char  n='y';
-		int k='1';
+		int k='0';
 		int t=0,l=0;
 		int tic=1,flag,flag1=0,option;
 		while(true)
@@ -28,6 +28,7 @@ public class Banking
 				System.err.println("your ticket no is "+t);
 				System.out.println();
 				l=  q.add();
+				System.out.println(l);
 			}
 
 
@@ -49,7 +50,7 @@ public class Banking
 							option =sc.nextInt();
 
 							if(option==1)
-								{tic++;   
+								{ 
 									System.out.println("Enter the amount to deposite");
 									double amtd=sc.nextDouble();
 									b.dep(amtd);
