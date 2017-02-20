@@ -49,13 +49,13 @@ public class Coupon
 				System.out.println(a[i]);
 			}
 
-			try {
+	//		try {
 				System.out.println("Do you want conitnue?,press y or n");
 				d=s.next().charAt(0);
-			}
-			catch(InputMismatchException e)
-
-			{
+		//	}
+		//	catch(InputMismatchException e)
+//
+				if(d!='y'&&d!='Y')	{
 				System.out.println("Thank you ");
 				System.exit(0);
 			}
