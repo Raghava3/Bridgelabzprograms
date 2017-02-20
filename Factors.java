@@ -56,7 +56,7 @@ public class Factors
 		///	}
 		//	catch(InputMismatchException e)
 		//	{ 
-				if(d!='y')
+				if(d!='y'&&d!='Y')
 				{
 				System.out.println("Thank you ");
 				System.exit(0);
