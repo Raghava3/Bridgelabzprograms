@@ -7,7 +7,7 @@ public class PowerOfTwo {
 	{
 		int n=0;
 		int pow=1;
-		int d=0;
+		char d='y';
 		Scanner scn=new Scanner(System.in);
 
 		do
@@ -19,35 +19,41 @@ public class PowerOfTwo {
 			}
 			catch(InputMismatchException e)
 			{
-				System.out.println("entered value should be integer");
+				System.out.println("you have entered non integer value");
 				break;
 			}
 			if(n>=0&&n<31)
 			{
-				System.out.println("the 2^"+n+" value is ");
-				for(int i=0;i<n;i++)
+				if(n==0)
 				{
-					pow=pow*2;
-					System.out.println(pow);
+					System.out.println("the 2^"+n+" value is "+2);
+
+				}
+				else{
+					System.out.println("the 2^"+n+" value is ");
+					for(int i=0;i<n;i++)
+					{
+						pow=pow*2;
+						System.out.println(pow);
+					}
 				}
 			}
 			else
 			{
 				System.out.println("number should be in between 0 to 31");
 			}
-			try    
+			//try    
 			{
-				System.out.println("do you want to continue press 1");
-				d=scn.nextInt();
+				System.out.println("do you want to continue press y");
+				d=scn.next().charAt(0);
 			}
-			catch(InputMismatchException e )
+			//catch(InputMismatchException e )
+			if(d!='y'&&d!='Y')	
 			{
 				System.out.println("thank you");
 				System.exit(0);
 			}
-
-
-		}while(d==1);
+		}while(d=='y'||d=='Y');
 		scn.close();
 		System.out.println("Thank you");
 	}
