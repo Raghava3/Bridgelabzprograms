@@ -50,15 +50,18 @@ public class Factors
 				}
 			}
 
-			try{
+		//	try{
 				System.out.println("Do you want to see prime factors of another number ?,press y or n");
 				d=scn.next().charAt(0);
-			}
-			catch(InputMismatchException e)
-			{
+		///	}
+		//	catch(InputMismatchException e)
+		//	{ 
+				if(d!='y')
+				{
 				System.out.println("Thank you ");
 				System.exit(0);
-			}
+				}
+		//	}
 
 		}while(d=='y'||d=='Y');
 		System.out.println("Thank you.");
