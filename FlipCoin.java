@@ -7,7 +7,8 @@ public class FlipCoin {
 	public static void main(String[] args)
 	{
 		Scanner scn =new Scanner (System.in);
-		int head=0,d=0;
+		int head=0;
+		char d='y';
 		double count=0;
 		do{
 			try{	
@@ -39,18 +40,18 @@ public class FlipCoin {
 			System.out.println("Heads % = "+perc);
 
 			System.out.println("Tails % = "+(100-perc));
-			try
-			{
-				System.out.println("Do you wish to conitnue,press 1");
-				d=scn.nextInt();
-			}
-			catch(InputMismatchException e)
-			{
-				System.out.println("thank you ");
-				System.exit(0);
-			}
-		}while(d==1);
-System.out.println("Thank you");
+			System.out.println("Do you want conitnue?,press y or n");
+			d=scn.next().charAt(0);
+	//	}
+	//	catch(InputMismatchException e)
+			if(d!='y'||d!='Y')
+		{
+			System.out.println("Thank you ");
+			System.exit(0);
+		}
+			}while(d=='y'||d=='Y');
+		System.out.println("Thank you.");
+
 
 	}
 
