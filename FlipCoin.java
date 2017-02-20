@@ -40,13 +40,13 @@ public class FlipCoin {
 			System.out.println("Heads % = "+perc);
 
 			System.out.println("Tails % = "+(100-perc));
-			try
-			{
+	//		try
+		//	{
 				System.out.println("Do you wish to conitnue,press y");
 				d=scn.next().charAt(0);
-			}
-			catch(InputMismatchException e)
-			
+		//	}
+		//	catch(InputMismatchException e)
+				if(d!='y'&&d!='Y')	
 			{
 				System.out.println("thank u");
 
