@@ -6,7 +6,7 @@ public class LeapYear {
 	public static void main(String[] args)
 	{
 		Scanner scn=new Scanner(System.in);
-		int n=0;
+		char d='y';
 		int year=0;
 		do
 		{
@@ -37,17 +37,19 @@ public class LeapYear {
 			{
 				System.out.println("number should be four digit");
 			}
-			try{
-				System.out.println("enter 1 to continue");
-				n=scn.nextInt();
-			}
-			catch(InputMismatchException e)
-			{
-				System.out.println("Thank you");
-				System.exit(0);
-			}
-		}while(n==1);
-		System.out.println("thank u");
+			System.out.println("Do you want conitnue?,press y ");
+			d=scn.next().charAt(0);
+	//	}
+	//	catch(InputMismatchException e)
+			// changed from try catch block to if block
+			if(d!='y'&&d!='Y')
+		{
+			System.out.println("Thank you ");
+			System.exit(0);
+		}
+			}while(d=='y'||d=='Y');
+		System.out.println("Thank you.");
+	
 		scn.close();
 	}
 
