@@ -1,5 +1,6 @@
 package com.Bridgelabz;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Banking 
@@ -20,7 +21,8 @@ public class Banking
 
 			System.out.println(" enter 2  to proceed with transaction  ");
 			n=sc.next().charAt(0);
-
+//generating the ticket number{
+			
 			if(n=='1')
 			{ 
 				flag1=1;
@@ -31,14 +33,23 @@ public class Banking
 				System.out.println(l);
 			}
 
-
+//checking the ticket number
 			else if(n=='2')
 			{
 				if(flag1==1)  
-				{
+				{   try{
 					System.out.println(" enter ticket number");
 					k=sc.nextInt();
-				System.out.println("tic="+tic+"k="+k+"l="+l);
+				}
+				catch(InputMismatchException f)
+				{
+					while(true)
+					{
+						System.out.println("invalid ticket number");
+						break;
+					}
+				}
+			//	System.out.println("tic="+tic+"k="+k+"l="+l);
 					if(tic==k&&(l>0))
 					{
 
@@ -46,11 +57,26 @@ public class Banking
 
 						while(flag==1)
 						{
+							
+							
+							try{
+							
 							System.out.println("Select your operation in Bank\n 1>\tFor Deposite\n 2>\tFor WithDraw\n 3>\tFor Check Balance\n 4>\tExit\nEnter Your choice!!!");
 							option =sc.nextInt();
-
+							}
+							catch(InputMismatchException f)
+							{
+								while (true)
+								{
+								
+								System.out.println(" transaction incomplete . join queue for any further trancation ");
+								option =4;
+								break;
+								}
+							}
 							if(option==1)
 								{ 
+								
 									System.out.println("Enter the amount to deposite");
 									double amtd=sc.nextDouble();
 									b.dep(amtd);
