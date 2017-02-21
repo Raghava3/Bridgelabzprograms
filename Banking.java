@@ -10,8 +10,9 @@ public class Banking
 	{
 		Queue q=new Queue();
 		char  n='y';
-		int k='0';
+		int k='0',fl=1;
 		int t=0,l=0;
+		double amtd=0;
 		int tic=1,flag,flag1=0,option;
 		while(true)
 		{
@@ -33,7 +34,7 @@ public class Banking
 				System.out.println(l);
 			}
 
-//checking the ticket number
+//checking the ticket number}
 			else if(n=='2')
 			{
 				if(flag1==1)  
@@ -76,13 +77,29 @@ public class Banking
 							}
 							if(option==1)
 								{ 
-								
+								try{
 									System.out.println("Enter the amount to deposite");
-									double amtd=sc.nextDouble();
-									b.dep(amtd);
+									 amtd=sc.nextDouble();
+								}
+								catch(InputMismatchException d)
+								{
+									while(true)
+									{
+										fl=0;
+										System.out.println(" invalid amount. transaction complete");
+								   flag=0;
+								   tic++;
+								   l=q.exit();
+									    break;
+								    }
+								}
+								if(fl==1)
+								{
+								b.dep(amtd);
 									q.exit();
 
-								        }
+								}
+								}
 
 								else if(option==2)
 								{
