@@ -10,9 +10,9 @@ public class Banking
 	{
 		Queue q=new Queue();
 		char  n='y';
-		int k='0',fl=1;
+		int k='0',fl=1,fl1=1;
 		int t=0,l=0;
-		double amtd=0;
+		double amtd=0,amtw=0;
 		int tic=1,flag,flag1=0,option;
 		while(true)
 		{
@@ -84,12 +84,11 @@ public class Banking
 								catch(InputMismatchException d)
 								{
 									while(true)
-									{
+									{   flag=0;
 										fl=0;
-										System.out.println(" invalid amount. transaction complete");
-								   flag=0;
-								   tic++;
-								   l=q.exit();
+										System.out.println(" invalid amount,transaction incomplete . join queue for any further trancation");
+										tic++;
+										l=q.exit();
 									    break;
 								    }
 								}
@@ -103,12 +102,27 @@ public class Banking
 
 								else if(option==2)
 								{
-
+                                   try{
 									System.out.println("Enter the amount to withdraw");
-									double amtw=sc.nextDouble();
-									b.wd(amtw);
+									amtw=sc.nextDouble();
+                                   }
+                                   catch(InputMismatchException a)
+                                   {
+                                	   while(true)
+   									{
+                                		   flag=0;
+   										fl1=0;
+   										System.out.println(" invalid amount. transaction incomplete . join queue for any further trancation  ");
+   										tic++;
+   										l=q.exit();
+   									    break;
+   								    }
+                                   }
+                                   if(fl1==1)
+                                   {
+                                   b.wd(amtw);
 									q.exit();
-
+                                   }
 								}
 								else if(option ==3)
 								{
