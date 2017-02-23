@@ -85,7 +85,7 @@ private static String[] bubbleSortForString(String[] str)
 //bubble sort method for integer
 
 
-private static int[] bubbleSortForInteger(int[] str) 
+public static int[] bubbleSortForInteger(int[] str) 
 {
 	for (int i = 0; i < str.length-1; i++) 
 	{
@@ -148,48 +148,7 @@ private static int[] bubbleSortForInteger(int[] str)
 			    
 			  //---------------------------------------------------------------------------------------------
 			  //insertion  sort method for integer 
-
-			  		
-			  		
-			  		 /*  public static void insertionSortForInteger(int [] array) 
-			  			{
-			  			        int len = array.length;
-
-			  			        for (int i = len - 1; i > 1; i--) {
-			  			            if (array[i]<(array[i-1]))
-			  			            {
-			  			                swap(array, i, i - 1);
-			  			            }
-			  			        }
-
-			  			        for (int i = 2; i < len; i++) {
-			  			            int temp = array[i];
-			  			            int j = i;
-			  			            while (temp>(array[j - 1]))
-			  			            {
-			  			                array[j] = array[j - 1];
-			  			                j--;
-			  			            }
-			  			            array[j] = temp;
-			  			        }
-
-			  			        for (int i = 0; i < array.length; i++) {
-			  			        	
-			  			        	System.out.println(array[i]);
-			  						
-			  					}
-			  			    }
-
-			  			    public static  void swap(int[] array, int i, int j) 
-			  			    {
-			  			        int temp = array[i];
-			  			        array[i] = array[j];
-			  			        array[j] = temp;
-			  			    }
-			    */
-			    
-			    
-			    private static void insertionSortForInteger(int[] arr) {
+   private static void insertionSortForInteger(int[] arr) {
 					for (int i = 1; i < arr.length; i++) {
 						int valueToSort = arr[i];
 						int j = i;
