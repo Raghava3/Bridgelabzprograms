@@ -38,8 +38,8 @@ public class TestListInt {
 		scn.close();
 		//calling the method which is present in linked list
 		if(ll.search(find)){
-			ll.remove(find);
-			ll.removeAll(find);
+			//ll.remove(find);// if we want to remove only on number
+			ll.removeAll(find);//if we want to remove repeting number
 			System.out.println("value found....so..!!!!! Removed");
 		}
 		//calling the method which is present in linked list
