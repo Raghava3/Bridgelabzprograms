@@ -9,7 +9,7 @@ public class Factors
 		Scanner scn =new Scanner(System.in);
 		char d=' ';
 		int num=0;
-		int p=0;
+		int p=0,flag=1;
 		do{
 			try{
 				System.out.println("Enter the number you want to find prime factors ");
@@ -17,9 +17,14 @@ public class Factors
 			}
 			catch(InputMismatchException e)
 			{
+				flag=0;
 
-				System.out.println("sorry you have  entered non-integer value ");
-				break;
+				 num=Factors.wrong();
+					while(num==0)
+					{
+						num=	Factors.wrong();
+					}
+					
 			}
 
 			if(p!=1)
@@ -49,13 +54,18 @@ public class Factors
 					}
 				}
 			}
-
+			if(flag==0)
+			{
+			scn.next();
+			}
 		//	try{
 				System.out.println("Do you want to see prime factors of another number ?,press y or n");
 				d=scn.next().charAt(0);
 		///	}
 		//	catch(InputMismatchException e)
 		//	{ 
+				//changed from try catch block to if block 
+				
 				if(d!='y'&&d!='Y')
 				{
 				System.out.println("Thank you ");
@@ -68,4 +78,21 @@ public class Factors
 
 		scn.close();
 	}
+
+	public static int wrong()
+	{		
+		Scanner scn1 =new Scanner(System.in);
+		int n=0;
+		try{
+			System.out.println("Please enter  number");
+			 n=scn1.nextInt();
+		
+	     	}
+		catch(InputMismatchException a)
+		 {
+			return 0;
+		 }
+		 return n;
+
+}
 }
