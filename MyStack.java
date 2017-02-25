@@ -14,8 +14,9 @@ public class MyStack {
 	   System.out.println( "adding "+( stackArray[++top] = j));
 	   }
 	   public char pop() {
-		   System.out.println("pop"+(stackArray[top--]));
-	      return (char) stackArray[top--];
+		   	int i = top--;
+		 System.out.println("pop"+(stackArray[i]));
+	      return (char) stackArray[i];
 	   }
 	   public long peek() {
 	      return stackArray[top];
