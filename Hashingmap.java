@@ -56,6 +56,8 @@ public class Hashingmap {
 			list1.add(num);
 		}
 		System.out.println(map);
-	}
+sc.close();
+s.close();
+}
 
 }
