@@ -21,7 +21,7 @@ public class MainClassForSD {
 	int noofshares=scn.nextInt();
 	System.out.println("enter the price of the share");
     int price=scn.nextInt();
-     totalstock=totalstock+n;
+     totalstock=totalstock+noofshares;
      totalvalue=totalvalue+(noofshares*price);
   StockData ob=   new StockData(stockname,noofshares,price);
     k=l1.insert(ob);
