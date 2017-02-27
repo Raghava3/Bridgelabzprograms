@@ -39,11 +39,12 @@ public class LinkedListClassForSD {
 				temp=temp.next;
 				
 			}
-			System.out.println("total   number of  stock value is "+t);
+			System.out.println("total   number of  stock is "+t);
 		System.out.println("totoal share value is "+v);
 		
 			
 		}
 	}
+//own implementation for serch method  
 
 
